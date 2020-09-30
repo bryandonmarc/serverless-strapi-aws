@@ -1,0 +1,41 @@
+{
+  "name": "sls-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "yarn install && ./scripts/pre-build.sh && strapi build && ./scripts/post-build.sh",
+    "deploy": "./scripts/trim-node-modules.sh && serverless deploy --verbose",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.8.0"
+  },
+  "dependencies": {
+    "knex": "<0.20.0",
+    "serverless-http": "^2.6.0",
+    "sqlite3": "latest",
+    "strapi": "3.1.6",
+    "strapi-admin": "3.1.6",
+    "strapi-connector-bookshelf": "3.1.6",
+    "strapi-plugin-content-manager": "3.1.6",
+    "strapi-plugin-content-type-builder": "3.1.6",
+    "strapi-plugin-email": "3.1.6",
+    "strapi-plugin-upload": "3.1.6",
+    "strapi-plugin-users-permissions": "3.1.6",
+    "strapi-utils": "3.1.6"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "070b1c37-8b1e-4165-b6e7-4e238a3715bb"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
